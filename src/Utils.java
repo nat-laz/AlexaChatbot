@@ -4,14 +4,15 @@ public class Utils {
 
     public static boolean askYesNoQuestion(String question, Scanner scanner) {
         while (true) {
-            System.out.print("Chatbot: " + question + " (yes/no): ");
+            Logger.printAndLog("Chatbot: " + question + " (yes/no): ");
             String response = scanner.nextLine().trim().toLowerCase();
+            Logger.log(response);
             if (response.equals("yes")) {
                 return true;
             } else if (response.equals("no")) {
                 return false;
             } else {
-                System.out.println("Chatbot: Please answer 'yes' or 'no'.");
+                Logger.printAndLog("Chatbot: Please answer 'yes' or 'no'.");
             }
         }
     }

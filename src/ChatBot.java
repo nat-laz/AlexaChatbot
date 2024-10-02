@@ -3,11 +3,11 @@ import java.util.*;
 class ChatBot {
     private static Scanner scanner = new Scanner(System.in);
     private final IssueResolver issueResolver;
-    private final Logger logger;
+    //private final Logger Logger;
 
     public ChatBot() {
-        logger = new Logger();
-        issueResolver = new IssueResolver(logger);
+        //Logger = new Logger();
+        issueResolver = new IssueResolver();
 
     }
 
@@ -18,11 +18,11 @@ class ChatBot {
         while (continueChat) {
             displayMenu(false);
 
-            System.out.print("You: ");
+            Logger.printAndLog("You: ");
             userInput = scanner.nextLine();
-
+            Logger.log(userInput);
             if (userInput.equalsIgnoreCase("exit")) {
-                logger.printAndLog("Chatbot: Goodbye! Hope I could help you.");
+                Logger.printAndLog("Chatbot: Goodbye! Hope I could help you.");
                 break;
             }
 
@@ -36,7 +36,7 @@ class ChatBot {
             if (Utils.askYesNoQuestion("Do you need help with anything else?", scanner)) {
                 continueChat = true;
             } else {
-                logger.printAndLog("Chatbot: Goodbye! Hope I could help you.");
+                Logger.printAndLog("Chatbot: Goodbye! Hope I could help you.");
                 continueChat = false;
             }
         }
@@ -59,7 +59,7 @@ class ChatBot {
                 "Insert a keyword with your problem or type your question here.";
 
         if (logMenu) {
-            logger.printAndLog(menu);
+            Logger.printAndLog(menu);
         } else {
             System.out.println(menu);
         }
@@ -96,47 +96,47 @@ class ChatBot {
             switch (mostRelevantIssue) {
                 case "alexaNotResponding":
                     issueResolver.alexaNotResponding();
-                    logger.printAndLog("Request help with Issue: Alexa is not responding");
+                    Logger.printAndLog("Request help with Issue: Alexa is not responding");
                     break;
                 case "wifiIssues":
                     issueResolver.wifiIssues();
-                    logger.printAndLog("Request help with Issue: Wi-Fi connection problems");
+                    Logger.printAndLog("Request help with Issue: Wi-Fi connection problems");
                     break;
                 case "adjustVolume":
                     issueResolver.adjustVolume();
-                    logger.printAndLog("Request help with Issue: Adjusting the volume");
+                    Logger.printAndLog("Request help with Issue: Adjusting the volume");
                     break;
                 case "enablingSkills":
                     issueResolver.enablingSkills();
-                    logger.printAndLog("Request help with Issue: Enabling Alexa skills");
+                    Logger.printAndLog("Request help with Issue: Enabling Alexa skills");
                     break;
                 case "checkForUpdates":
                     issueResolver.checkForUpdates();
-                    logger.printAndLog("Request help with Issue: Checking for updates");
+                    Logger.printAndLog("Request help with Issue: Checking for updates");
                     break;
                 case "setupDevice":
                     issueResolver.setupDevice();
-                    logger.printAndLog("Request help with Issue: Setting up a new device");
+                    Logger.printAndLog("Request help with Issue: Setting up a new device");
                     break;
                 case "generalTroubleshooting":
                     issueResolver.generalTroubleshooting();
-                    logger.printAndLog("Request help with Issue: General troubleshooting");
+                    Logger.printAndLog("Request help with Issue: General troubleshooting");
                     break;
                 case "echoDotIssues":
                     issueResolver.echoDotIssues();
-                    logger.printAndLog("Request help with Issue: Echo Dot problems");
+                    Logger.printAndLog("Request help with Issue: Echo Dot problems");
                     break;
                 case "playMusic":
                     issueResolver.playMusic();
-                    logger.printAndLog("Request help with Issue: Playing music");
+                    Logger.printAndLog("Request help with Issue: Playing music");
                     break;
                 case "scheduleACall":
                     issueResolver.scheduleACall();
-                    logger.printAndLog("Request help with Issue: Scheduling a call");
+                    Logger.printAndLog("Request help with Issue: Scheduling a call");
                     break;
             }
         } else {
-            logger.printAndLog("Chatbot: I'm sorry, I didn't understand that. Please try asking about common issues with Alexa or refer to the menu.");
+            Logger.printAndLog("Chatbot: I'm sorry, I didn't understand that. Please try asking about common issues with Alexa or refer to the menu.");
             displayMenu(true);
         }
     }
@@ -152,11 +152,11 @@ class ChatBot {
     }
 
     private void displayHistory() {
-        if (logger.getMessages().isEmpty()) {
+        if (Logger.getMessages().isEmpty()) {
             System.out.println("Chatbot: No conversation history available.");
         } else {
             System.out.println("Chatbot: Here is your conversation history:");
-            for (String message : logger.getMessages()) {
+            for (String message : Logger.getMessages()) {
                 System.out.println(message);
             }
         }

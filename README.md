@@ -2,11 +2,11 @@
 
 #### Objective:
 
-Create a program that simulates a customer support chat bot capable of providing responses to customer inquiries.
+This project simulates a customer support chat bot capable of responding to various customer inquiries for a real-world company. The chatbot provides assistance on topics such as technical issues, product information, billing, and more.
 
 ## AlexaChatbot
 
-Awesome chatbot for Amazon Alexa smart speaker
+An awesome chatbot designed for Amazon Alexa smart speakers to enhance customer support interactions.
 
 ### Team members
 

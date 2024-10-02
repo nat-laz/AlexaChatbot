@@ -4,6 +4,17 @@
 
 Create a program that simulates a customer support chat bot capable of providing responses to customer inquiries.
 
+## AlexaChatbot
+
+Awesome chatbot for Amazon Alexa smart speaker
+
+### Team members
+
+    - Alex Bruch
+    - Natalie Lazarev
+    - Mitali Soti
+
+
 #### Instructions:
 
 #### Step 1: Create the Chat Bot
@@ -36,4 +47,4 @@ Create a program that simulates a customer support chat bot capable of providing
 
   -	Allow customers to end the chat with a specific command (e.g., "exit").
   -	The program should handle the exit command and close the chat session.
-# AlexaChatbot
+

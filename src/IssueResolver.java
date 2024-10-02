@@ -3,22 +3,17 @@ import java.util.Set;
 
 class IssueResolver {
     private static Scanner scanner = new Scanner(System.in);
-    //private Logger Logger;
-
-    public IssueResolver() {
-        //this.Logger = Logger;
-    }
 
     public Set<String> alexaNotRespondingKeywords() {
         return Set.of("responding issue", "not responding", "won't respond", "stopped working", "alexa isn't responding", "alexa not hearing");
     }
 
     public Set<String> wifiIssuesKeywords() {
-        return Set.of("wifi", "internet", "connection", "no internet", "network issues");
+        return Set.of("wifi", "internet", "connection", "connectivity", "no internet", "network issues", "loading", "slow", "speed");
     }
 
     public Set<String> adjustVolumeKeywords() {
-        return Set.of("volume", "loudness", "sound", "increase volume", "decrease volume");
+        return Set.of("volume", "loudness", "sound", "increase volume", "decrease volume", "cant hear");
     }
 
     public Set<String> enablingSkillsKeywords() {
@@ -26,11 +21,11 @@ class IssueResolver {
     }
 
     public Set<String> checkForUpdatesKeywords() {
-        return Set.of("update", "upgrade", "new version", "check for updates", "software update");
+        return Set.of("update", "upgrade", "new version", "check for updates", "software update", "version");
     }
 
     public Set<String> setupDeviceKeywords() {
-        return Set.of("setup", "install", "configure", "add device", "device setup");
+        return Set.of("setup", "install", "configure", "add device", "device setup", "connect iphone", "iphone");
     }
 
     public Set<String> generalTroubleshootingKeywords() {
@@ -42,7 +37,7 @@ class IssueResolver {
     }
 
     public Set<String> playMusicKeywords() {
-        return Set.of("play music", "music", "listen to music", "play a song", "play audio");
+        return Set.of("play music", "music", "listen to music", "play a song", "play audio", "song", "audio");
     }
 
     public Set<String> scheduleACallKeywords() {

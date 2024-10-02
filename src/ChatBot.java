@@ -1,12 +1,12 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
 
 class ChatBot {
-    private static Scanner scanner = new Scanner(System.in);
     private final IssueResolver issueResolver;
-    //private final Logger Logger;
 
     public ChatBot() {
-        //Logger = new Logger();
         issueResolver = new IssueResolver();
 
     }
@@ -44,19 +44,7 @@ class ChatBot {
 
 
     private void displayMenu(boolean logMenu) {
-        String menu = "\nWhat do you need help with?\n" +
-                "1. Alexa not responding\n" +
-                "2. Wi-Fi connection issues\n" +
-                "3. Volume adjustment\n" +
-                "4. Enabling skills\n" +
-                "5. Updating Alexa\n" +
-                "6. Setting up a device\n" +
-                "7. General troubleshooting\n" +
-                "8. Echo Dot issues\n" +
-                "9. Play music\n" +
-                "10. Schedule a call with our representative\n" +
-                "Type 'history' to view conversation history.\n" +
-                "Insert a keyword with your problem or type your question here.";
+        String menu = "\nWhat do you need help with?\n" + "1. Alexa not responding\n" + "2. Wi-Fi connection issues\n" + "3. Volume adjustment\n" + "4. Enabling skills\n" + "5. Updating Alexa\n" + "6. Setting up a device\n" + "7. General troubleshooting\n" + "8. Echo Dot issues\n" + "9. Play music\n" + "10. Schedule a call with our representative\n" + "Type 'history' to view conversation history.\n" + "Insert a keyword with your problem or type your question here.";
 
         if (logMenu) {
             Logger.printAndLog(menu);

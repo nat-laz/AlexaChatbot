@@ -10,10 +10,9 @@ Awesome chatbot for Amazon Alexa smart speaker
 
 ### Team members
 
-    - Alex Bruch
-    - Natalie Lazarev
-    - Mitali Soti
-
+- [Alex Bruch](https://github.com/bruch-alex)
+- [Mitali Soti](https://github.com/mitalisoti)
+- [Natalie Lazarev](https://github.com/nat-laz)
 
 #### Instructions:
 
